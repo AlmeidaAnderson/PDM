@@ -2,6 +2,7 @@
 .metadata/
 RemoteSystemsTempFiles/
 .settings/
+.settings
 Debug/
 *.launch
 
