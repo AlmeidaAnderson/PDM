@@ -1,0 +1,7 @@
+../Core/Src/EEPROM.c:17:6:initEEPROM	1
+../Core/Src/EEPROM.c:24:9:readEEPROM	3
+../Core/Src/EEPROM.c:42:9:writeEEPROM	2
+../Core/Src/EEPROM.c:67:9:setTransmissionDelay	1
+../Core/Src/EEPROM.c:77:9:getTransmissionDelay	1
+../Core/Src/EEPROM.c:89:9:setTransmissionStatus	1
+../Core/Src/EEPROM.c:97:9:getTransmissionStatus	1

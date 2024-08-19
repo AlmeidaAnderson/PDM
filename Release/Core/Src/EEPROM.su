@@ -1,0 +1,7 @@
+../Core/Src/EEPROM.c:17:6:initEEPROM	8	static
+../Core/Src/EEPROM.c:24:9:readEEPROM	48	static
+../Core/Src/EEPROM.c:42:9:writeEEPROM	40	dynamic
+../Core/Src/EEPROM.c:67:9:setTransmissionDelay	16	static
+../Core/Src/EEPROM.c:77:9:getTransmissionDelay	16	static
+../Core/Src/EEPROM.c:89:9:setTransmissionStatus	16	static
+../Core/Src/EEPROM.c:97:9:getTransmissionStatus	16	static

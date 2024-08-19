@@ -95,11 +95,3 @@ uint32_t readValues(float *read){
 	}
 	return cnt;
 }
-
-void stopDMA(){
-	HAL_ADC_Stop_DMA(hadc);
-}
-
-void startDMA(){
-	HAL_ADC_Start_DMA(hadc, dma_values, CONV_SIZE);
-}

@@ -22,6 +22,7 @@
 #include "stm32f1xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "comm.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,7 +42,11 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
+extern uint16_t Timer1, Timer2;
 
+uint32_t count_comm = 0;
+extern uint16_t txDelay;
+extern uint8_t status_COMM;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -184,11 +189,22 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
+	if(Timer1 > 0)
+		Timer1--;
+
+	if(Timer2 > 0)
+		Timer2--;
 
   /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();
   /* USER CODE BEGIN SysTick_IRQn 1 */
-
+  if(status_COMM & 1){
+		count_comm++;
+		if(count_comm >= txDelay){
+			count_comm = 0;
+			transmitMessage(uwTick);
+		}
+  }
   /* USER CODE END SysTick_IRQn 1 */
 }
 

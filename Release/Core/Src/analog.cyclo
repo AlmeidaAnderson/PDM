@@ -1,0 +1,4 @@
+../Core/Src/analog.c:35:9:initAnalog	2
+../Core/Src/analog.c:52:6:HAL_ADC_ConvCpltCallback	7
+../Core/Src/analog.c:73:10:readRAW	2
+../Core/Src/analog.c:89:10:readValues	2
